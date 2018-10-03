@@ -1,0 +1,21 @@
+root@ubuntu-xenial:/etc/ansible/roles/initial/tasks# openssl passwd -1
+Password: 
+Verifying - Password: 
+$1$1dP2kE.v$in7bSGENAYmKledoEf7xg/
+
+
+docker tag imageorigem imagedestine:tag
+
+docker commit segundo debian-meu
+docker image ls 
+
+docker rm -rf $(docker ps -qa)
+
+portainer para o docker!!!
+
+docker volume create web
+
+#NAO USAR O COMANDO ATRAS DO HTTPD OU NÃO VAI RODAR O APACHE2!!
+docker run -d -v data:/usr/local/apache2/htdocs/ httpd
+
+https://explainshell.com
