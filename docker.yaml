@@ -6,3 +6,8 @@
      shell: 'curl -fsSL https://get.docker.com -o get-docker.sh'
    - name: instalando docker
      shell: 'sh get-docker.sh'
+- name: install o2
+  hosts: all 
+  tasks:
+   - name: install
+     shell: 'echo ola mundo'
