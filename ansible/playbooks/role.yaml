@@ -1,0 +1,6 @@
+---
+
+- name: usando roles
+  hosts: all
+  roles:
+   - initial

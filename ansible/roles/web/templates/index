@@ -1,0 +1,8 @@
+<marquee>
+<h1>
+
+Familia da maquina = {{ansible_os_family}}
+hostname da maquina = {{ansible_hostname}}
+
+</h1>
+</marquee>

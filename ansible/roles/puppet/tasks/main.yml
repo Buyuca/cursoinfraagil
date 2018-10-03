@@ -1,0 +1,6 @@
+---
+# tasks file for puppet
+- name: adicionar repositorio debian
+  include: add_repository.yaml
+- name: instalando puppet
+  include: install-puppet.yaml

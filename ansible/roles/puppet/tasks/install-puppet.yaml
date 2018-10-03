@@ -1,0 +1,12 @@
+
+- name: install puppet server
+  package:
+   name: puppetserver
+   state: present
+  when: ansible_hostname == "devops"
+
+- name: install puppet agent
+  package: 
+   name: puppet-agent
+   state: present
+  when: (ansible_hostname == "automation" or ansible_hostname == "docker")

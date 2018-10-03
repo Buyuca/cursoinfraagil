@@ -1,0 +1,6 @@
+---
+- name: puppet install
+  hosts: devops docker
+  tasks:
+   - name: add repository
+   

@@ -1,0 +1,7 @@
+- name: removing old docker
+  apt:
+   update_cache: yes
+   pkg: "{{docker, docker-engine, docker.io }}"
+   state: absent
+
+- name: 

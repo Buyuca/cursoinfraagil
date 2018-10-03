@@ -1,0 +1,30 @@
+---
+
+- name: installing apache
+  package: 
+    name: apache2
+    register: result
+    when: ansible_os_family == "Debian"
+  ignore_errors: yes
+   
+- name: instaling apache CentOS
+  package: 
+    name: httpd
+    register: result
+    when: ansible_os_family == "RedHat"
+  ignore_errors: yes
+
+- name: configurar apache
+   include: apache-config.yaml
+   when: result.rc == 0
+ 
+- name: apache start and enable
+   service:
+    name: apache2
+    state: started
+    enabled: yes
+
+- name: fwd restart
+   service:
+    name: firewalld
+    state: restarted

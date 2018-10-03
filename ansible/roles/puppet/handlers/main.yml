@@ -1,0 +1,6 @@
+---
+# handlers file for puppet
+- name: yum-clean-metadada
+  command: yum clean metadata
+  args:
+    warn: no

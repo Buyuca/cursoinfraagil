@@ -1,0 +1,28 @@
+---
+- name: instalar EPEL-RELEASE
+  hosts: devops
+  tasks:
+    - name: instalar epel-release
+      yum: 
+       name: epel-release
+- name: Playbook do exercicio
+  hosts: all
+  tasks:
+   - name: Add user Developer
+     user:
+       name: developer
+   - name: Add user Devops
+     user:
+       name: devops 
+   - name: Add user Emilio
+     user:
+       name: emilio
+   - name: instalar pacotes
+     package:
+         name:
+           - vim
+           - htop
+           - sl
+           - cowsay
+     state: present
+     update_cache: yes 
